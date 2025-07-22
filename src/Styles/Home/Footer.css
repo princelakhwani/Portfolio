@@ -10,32 +10,92 @@
 }
 
 .footer-left a {
-  color: #aaa;
-  text-decoration: none;
-  margin-left: 1rem;
   margin-right: 2rem;
   font-size: 14px;
   font-weight: bold;
-  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  display: inline-flex;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.footer-left a:hover {
+.footer-left a:hover,
+.footer-link-animated:hover {
+  background-color: #313131;
   color: white;
+  cursor: pointer;
+}
+
+.footer-link-animated {
+  display: inline-flex;
+  overflow: hidden;
+  color: #aaa;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  align-items: center; /* vertically center icon and text */
+  gap: 0.5rem; /* space between icon and text */
+}
+
+/* Spotify icon next to text */
+.listen-button .spotify-icon {
+  width: 20px;
+  height: 20px;
+  fill: #1DB954;
+  flex-shrink: 0;
+}
+
+/* Letter wrapper and animation */
+.footer-link-animated .letter-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 1ch;
+  height: 1em;
+  overflow: hidden;
+}
+
+.footer-link-animated .white-letter,
+.footer-link-animated .yellow-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition-delay: calc(var(--i) * 50ms);
+}
+
+.footer-link-animated .white-letter {
+  color: inherit;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.footer-link-animated .yellow-letter {
+  color: white;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.footer-link-animated:hover .white-letter {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.footer-link-animated:hover .yellow-letter {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .footer-right {
-  margin-right:  1rem;  
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.spotify-icon {
-  width: 24px;
-  height: 24px;
-  fill: #1DB954; /* Spotify green */
-}
-
-.footer-right span {
-  font-size: 14px;
 }
