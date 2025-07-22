@@ -1,0 +1,39 @@
+.custom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 1rem 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #aaa;
+  font-weight: bold;
+}
+
+.footer-left a {
+  color: #aaa;
+  text-decoration: none;
+  margin-right: 2rem;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-left a:hover {
+  color: white;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spotify-icon {
+  width: 24px;
+  height: 24px;
+  fill: #1DB954; /* Spotify green */
+}
+
+.footer-right span {
+  font-size: 14px;
+}
