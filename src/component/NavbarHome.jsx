@@ -5,13 +5,34 @@ function NavbarHome() {
   return (
     <nav className="navbar-home">
       <div className="navbar-left">
-        <span className="dot" /> <span className="name">PrinceLakhwani</span>
+        <span className="dot" />
+        <span className="name">
+          {'PrinceLakhwani'.split('').map((char, i) => (
+            <span className="letter-wrapper" style={{ '--i': i }} key={i}>
+              <span className="white-letter">{char}</span>
+              <span className="yellow-letter">{char}</span>
+            </span>
+          ))}
+        </span>
       </div>
 
       <ul className="navbar-center">
-        <li><a href="#works">SELECTED WORKS</a></li>
-        <li><a href="#about">ABOUT ME</a></li>
-        <li><a href="#playground">PLAYGROUND</a></li>
+        {[
+          { label: 'SELECTED WORKS', href: '#works' },
+          { label: 'ABOUT ME', href: '#about' },
+          { label: 'PLAYGROUND', href: '#playground' },
+        ].map((link, index) => (
+          <li key={index}>
+            <a href={link.href} className="navlink-animated">
+              {link.label.split('').map((char, i) => (
+                <span className="letter-wrapper" style={{ '--i': i }} key={i}>
+                  <span className="white-letter">{char}</span>
+                  <span className="yellow-letter">{char}</span>
+                </span>
+              ))}
+            </a>
+          </li>
+        ))}
       </ul>
 
       <div className="navbar-right">

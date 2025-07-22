@@ -17,7 +17,7 @@
 .navbar-home,
 .navbar-home * {
   font-weight: bold !important;
-  font-size: 1rem !important; /* Adjust this value to your preference */
+  font-size: 1rem !important;
 }
 
 .navbar-left {
@@ -29,11 +29,60 @@
 .dot {
   width: 8px;
   height: 8px;
-  background-color: #ffc400; /* Yellow dot */
+  background-color: #ffc400;
   border-radius: 50%;
   margin-right: 10px;
 }
 
+/* Animation for name (PrinceLakhwani) */
+.name {
+  display: inline-flex;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.letter-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 1ch;
+  height: 1em;
+  overflow: hidden;
+}
+
+.white-letter,
+.yellow-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition-delay: calc(var(--i) * 70ms);
+}
+
+.white-letter {
+  color: white;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.yellow-letter {
+  color: #ffc400;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.name:hover .white-letter {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.name:hover .yellow-letter {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Navbar center links */
 .navbar-center {
   display: flex;
   gap: 2rem;
@@ -43,16 +92,56 @@
   margin-left: 7rem;
 }
 
-.navbar-center li a {
-  color: #ccc;
+/* Animated nav links (same effect as name) */
+.navlink-animated {
+  display: inline-flex;
+  overflow: hidden;
   text-decoration: none;
-  transition: color 0.3s;
+  color: white;
 }
 
-.navbar-center li a:hover {
-  color: #fff;
+.navlink-animated .letter-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 1ch;
+  height: 1em;
+  overflow: hidden;
 }
 
+.navlink-animated .white-letter,
+.navlink-animated .yellow-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition-delay: calc(var(--i) * 40ms);
+}
+
+.navlink-animated .white-letter {
+  color: #ccc;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navlink-animated .yellow-letter {
+  color: #ffc400;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.navlink-animated:hover .white-letter {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.navlink-animated:hover .yellow-letter {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Right-side buttons */
 .navbar-right {
   display: flex;
   align-items: center;
