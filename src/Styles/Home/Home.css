@@ -1,3 +1,5 @@
+
+/* Main container */
 .home {
   height: 100vh;
   width: 100%;
@@ -5,16 +7,19 @@
   color: white;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
+/* Center content */
 .home-content {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 64px; /* height of the navbar to avoid overlap */
+  padding-top: 64px; /* Adjust for navbar height */
 }
 
+/* Heading style */
 .home-content h1 {
   font-size: 3rem;
   text-align: center;
