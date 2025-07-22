@@ -12,6 +12,7 @@
 .footer-left a {
   color: #aaa;
   text-decoration: none;
+  margin-left: 1rem;
   margin-right: 2rem;
   font-size: 14px;
   font-weight: bold;
@@ -23,6 +24,7 @@
 }
 
 .footer-right {
+  margin-right:  1rem;  
   display: flex;
   align-items: center;
   gap: 0.5rem;
