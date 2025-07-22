@@ -212,17 +212,58 @@
   opacity: 1;
 }
 
-/* CTA Button (Work With Me) */
+/* CTA Button (Work With Me) Animated */
 .cta-button {
   background-color: #1f1f1f;
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
-  color: white;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  overflow: hidden;
 }
 
-.cta-button:hover {
+.work-animated .letter-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 1ch;
+  height: 1em;
+  overflow: hidden;
+}
+
+.work-animated .white-letter,
+.work-animated .yellow-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition-delay: calc(var(--i) * 50ms);
+}
+
+.work-animated .white-letter {
+  color: white;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.work-animated .yellow-letter {
+  color: black;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.work-animated:hover {
   background-color: #ffc400;
   color: black;
+}
+
+.work-animated:hover .white-letter {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.work-animated:hover .yellow-letter {
+  transform: translateY(0);
+  opacity: 1;
 }

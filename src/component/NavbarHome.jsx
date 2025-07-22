@@ -44,8 +44,13 @@ function NavbarHome() {
             </span>
           ))}
         </a>
-        <a className="cta-button" href="#contact">
-          WORK WITH ME ↗
+        <a className="cta-button work-animated" href="#contact">
+          {'WORK WITH ME ↗'.split('').map((char, i) => (
+            <span className="letter-wrapper" style={{ '--i': i }} key={i}>
+              <span className="white-letter">{char}</span>
+              <span className="yellow-letter">{char}</span>
+            </span>
+          ))}
         </a>
       </div>
     </nav>
