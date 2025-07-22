@@ -36,8 +36,13 @@ function NavbarHome() {
       </ul>
 
       <div className="navbar-right">
-        <a className="resume" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-          My Resume ↗
+        <a className="resume resume-animated" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          {'My Resume ↗'.split('').map((char, i) => (
+            <span className="letter-wrapper" style={{ '--i': i }} key={i}>
+              <span className="white-letter">{char}</span>
+              <span className="yellow-letter">{char}</span>
+            </span>
+          ))}
         </a>
         <a className="cta-button" href="#contact">
           WORK WITH ME ↗

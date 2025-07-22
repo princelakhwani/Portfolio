@@ -92,7 +92,7 @@
   margin-left: 7rem;
 }
 
-/* Animated nav links (same effect as name) */
+/* Animated nav links */
 .navlink-animated {
   display: inline-flex;
   overflow: hidden;
@@ -148,22 +148,78 @@
   gap: 1.2rem;
 }
 
+/* Resume Button Animation */
 .resume {
-  color: #ccc;
   text-decoration: none;
+  background-color: transparent;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  overflow: hidden;
 }
 
-.resume:hover {
-  color: #fff;
+.resume-animated {
+  background-color: transparent;
+  color: #ccc;
 }
 
+.resume-animated .letter-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 1ch;
+  height: 1em;
+  overflow: hidden;
+}
+
+.resume-animated .white-letter,
+.resume-animated .yellow-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition-delay: calc(var(--i) * 50ms);
+}
+
+.resume-animated .white-letter {
+  color: #ccc;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.resume-animated .yellow-letter {
+  color: white;
+  transform: translateY(100%);
+  opacity: 0;
+  font-weight: bold;
+}
+
+.resume-animated:hover {
+  background-color: #313131;
+  color: white;
+  font-weight: bold;
+}
+
+.resume-animated:hover .white-letter {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.resume-animated:hover .yellow-letter {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* CTA Button (Work With Me) */
 .cta-button {
   background-color: #1f1f1f;
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
   color: white;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cta-button:hover {
