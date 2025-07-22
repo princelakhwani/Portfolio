@@ -1,34 +1,83 @@
 .navbar-home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #111;
-  padding: 1rem 2rem;
-  color: white;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
-}
-
-.navbar-home .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar-home .nav-links {
-  list-style: none;
+  height: 80px;
+  background-color: black;
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: white;
+  z-index: 100;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.navbar-home .nav-links li a {
-  color: white;
+/* Apply bold and increase font size globally within navbar */
+.navbar-home,
+.navbar-home * {
+  font-weight: bold !important;
+  font-size: 1rem !important; /* Adjust this value to your preference */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ffc400; /* Yellow dot */
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  justify-content: flex-start;
+  flex: 1;
+  margin-left: 7rem;
+}
+
+.navbar-center li a {
+  color: #ccc;
   text-decoration: none;
-  font-weight: 500;
   transition: color 0.3s;
 }
 
-.navbar-home .nav-links li a:hover {
-  color: #646cff;
+.navbar-center li a:hover {
+  color: #fff;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.resume {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.resume:hover {
+  color: #fff;
+}
+
+.cta-button {
+  background-color: #1f1f1f;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ffc400;
+  color: black;
 }

@@ -1,15 +1,27 @@
 import React from 'react';
-import '/src/Styles/NavbarHome.css'; // optional for styling
+import '/src/Styles/NavbarHome.css';
 
 function NavbarHome() {
   return (
     <nav className="navbar-home">
-      <div className="logo">My Portfolio</div>
-      <ul className="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li> {/* Optional: Future use */}
-        <li><a href="/projects">Projects</a></li>
+      <div className="navbar-left">
+        <span className="dot" /> <span className="name">Prince Lakhwani</span>
+      </div>
+
+      <ul className="navbar-center">
+        <li><a href="#works">SELECTED WORKS</a></li>
+        <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#playground">PLAYGROUND</a></li>
       </ul>
+
+      <div className="navbar-right">
+        <a className="resume" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          My Resume ↗
+        </a>
+        <a className="cta-button" href="#contact">
+          WORK WITH ME ↗
+        </a>
+      </div>
     </nav>
   );
 }
