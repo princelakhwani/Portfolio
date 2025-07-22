@@ -5,7 +5,7 @@ function NavbarHome() {
   return (
     <nav className="navbar-home">
       <div className="navbar-left">
-        <span className="dot" /> <span className="name">Prince Lakhwani</span>
+        <span className="dot" /> <span className="name">PrinceLakhwani</span>
       </div>
 
       <ul className="navbar-center">
