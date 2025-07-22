@@ -2,19 +2,25 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 12px; /* Smaller by default */
-  height: 12px;
-  background: transparent;
-  border: 2px solid white;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 196, 0, 0.65);  /* 65% visible fill */
+  border: 2px solid rgba(255, 196, 0, 0.85);  /* 85% visible border */
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, transform 0.08s ease;
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.08s ease;
   z-index: 9999;
   mix-blend-mode: difference;
 }
 
 .custom-cursor.cursor-hover {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 196, 0, 0.1);;             /* fill disappears on hover */
+  border-color: rgba(255, 196, 0, 0.85);      /* border remains solid */
 }
