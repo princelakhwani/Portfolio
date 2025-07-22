@@ -6,21 +6,19 @@ const CustomCursor = () => {
   const cursorRef = useRef(null);
   const [isHovering, setIsHovering] = useState(false);
 
-  const mouseX = useRef(0);
-  const mouseY = useRef(0);
-  const currentX = useRef(0);
-  const currentY = useRef(0);
-  const speed = 0.001;
+  const mouse = useRef({ x: 0, y: 0 });
+  const position = useRef({ x: 0, y: 0 });
+
+  const speed = 0.2; // SPEED HERE (try 0.2 to 0.5 for fast and smooth)
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      mouseX.current = e.clientX;
-      mouseY.current = e.clientY;
+      mouse.current.x = e.clientX;
+      mouse.current.y = e.clientY;
     };
 
     const handleMouseOver = (e) => {
       const target = e.target;
-      // Check for interactive elements
       if (
         target.closest('a') ||
         target.closest('button') ||
@@ -33,12 +31,11 @@ const CustomCursor = () => {
     };
 
     const animate = () => {
-      currentX.current += (mouseX.current - currentX.current) * speed;
-      currentY.current += (mouseY.current - currentY.current) * speed;
+      position.current.x += (mouse.current.x - position.current.x) * speed;
+      position.current.y += (mouse.current.y - position.current.y) * speed;
 
       if (cursorRef.current) {
-        cursorRef.current.style.left = `${currentX.current}px`;
-        cursorRef.current.style.top = `${currentY.current}px`;
+        cursorRef.current.style.transform = `translate(${position.current.x}px, ${position.current.y}px) translate(-50%, -50%)`;
       }
 
       requestAnimationFrame(animate);
