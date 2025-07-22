@@ -222,6 +222,7 @@
   overflow: hidden;
 }
 
+/* Each letter container */
 .work-animated .letter-wrapper {
   position: relative;
   display: inline-block;
@@ -230,6 +231,7 @@
   overflow: hidden;
 }
 
+/* Base styles for both layers */
 .work-animated .white-letter,
 .work-animated .yellow-letter {
   position: absolute;
@@ -237,10 +239,11 @@
   left: 0;
   width: 100%;
   text-align: center;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  transition-delay: calc(var(--i) * 50ms);
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition-delay: calc(var(--i) * 30ms); /* Faster stagger */
 }
 
+/* Default state */
 .work-animated .white-letter {
   color: white;
   transform: translateY(0);
@@ -253,6 +256,7 @@
   opacity: 0;
 }
 
+/* Hover styles */
 .work-animated:hover {
   background-color: #ffc400;
   color: black;
