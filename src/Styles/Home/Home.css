@@ -12,9 +12,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 64px; /* Height of navbar */
+  padding-top: 64px; /* height of the navbar to avoid overlap */
 }
-
 
 .home-content h1 {
   font-size: 3rem;
