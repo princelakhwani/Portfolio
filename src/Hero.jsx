@@ -22,10 +22,10 @@ const Hero = () => (
         <span className="play-label">PLAY PROJECT REELS</span>
       </div>
     </div>
-    <div className="hero-right">
+    {/* <div className="hero-right">
       <img src="https://via.placeholder.com/350x250?text=Placeholder+Image" alt="Placeholder" className="hero-image" />
       <span className="available-label">AVAILABLE FOR<br />CONTRACTS & COLLABS</span>
-    </div>
+    </div> */}
   </section>
 );
 
