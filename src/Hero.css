@@ -152,4 +152,20 @@
   .hero-section {
     padding: 2rem 1rem 1rem 1rem;
   }
+}
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.2rem;
+  }
+  .hero-section {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .play-label {
+    font-size: 0.9rem;
+  }
 } 
