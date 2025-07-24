@@ -2,7 +2,7 @@
 
 .grid-bg {
   min-height: 50vh;
-  background: #111;
+  background: black;
   background-image: linear-gradient(transparent 23px, #222 24px), linear-gradient(90deg, transparent 23px, #222 24px);
   background-size: 24px 24px;
   display: flex;
