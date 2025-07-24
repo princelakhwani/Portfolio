@@ -1,42 +1,64 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '/src/Styles/NavbarHome.css';
 
 function NavbarHome() {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  const navLinks = [
+    { label: 'SELECTED WORKS', href: '#works', type: 'anchor' },
+    { label: 'ABOUT ME', href: '/about', type: 'route' },
+    { label: 'PLAYGROUND', href: '#playground', type: 'anchor' },
+  ];
+
   return (
-    <nav className="navbar-home">
+    <nav className={`navbar-home ${isHome ? 'navbar-white' : 'navbar-black'}`}>
       <div className="navbar-left">
         <span className="dot" />
-        <span className="name">
+        <Link to="/" className="name">
           {'PrinceLakhwani'.split('').map((char, i) => (
             <span className="letter-wrapper" style={{ '--i': i }} key={i}>
               <span className="white-letter">{char}</span>
               <span className="yellow-letter">{char}</span>
             </span>
           ))}
-        </span>
+        </Link>
       </div>
 
       <ul className="navbar-center">
-        {[
-          { label: 'SELECTED WORKS', href: '#works' },
-          { label: 'ABOUT ME', href: '#about' },
-          { label: 'PLAYGROUND', href: '#playground' },
-        ].map((link, index) => (
+        {navLinks.map((link, index) => (
           <li key={index}>
-            <a href={link.href} className="navlink-animated">
-              {link.label.split('').map((char, i) => (
-                <span className="letter-wrapper" style={{ '--i': i }} key={i}>
-                  <span className="white-letter">{char}</span>
-                  <span className="yellow-letter">{char}</span>
-                </span>
-              ))}
-            </a>
+            {link.type === 'route' ? (
+              <Link to={link.href} className="navlink-animated">
+                {link.label.split('').map((char, i) => (
+                  <span className="letter-wrapper" style={{ '--i': i }} key={i}>
+                    <span className="white-letter">{char}</span>
+                    <span className="yellow-letter">{char}</span>
+                  </span>
+                ))}
+              </Link>
+            ) : (
+              <a href={link.href} className="navlink-animated">
+                {link.label.split('').map((char, i) => (
+                  <span className="letter-wrapper" style={{ '--i': i }} key={i}>
+                    <span className="white-letter">{char}</span>
+                    <span className="yellow-letter">{char}</span>
+                  </span>
+                ))}
+              </a>
+            )}
           </li>
         ))}
       </ul>
 
       <div className="navbar-right">
-        <a className="resume resume-animated" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a
+          className="resume resume-animated"
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {'My Resume ↗'.split('').map((char, i) => (
             <span className="letter-wrapper" style={{ '--i': i }} key={i}>
               <span className="white-letter">{char}</span>
@@ -44,7 +66,10 @@ function NavbarHome() {
             </span>
           ))}
         </a>
-        <a className="cta-button work-animated" href="#contact">
+        <a
+          className={`cta-button work-animated ${!isHome ? 'work-other-page' : ''}`}
+          href="#contact"
+        >
           {'WORK WITH ME ↗'.split('').map((char, i) => (
             <span className="letter-wrapper" style={{ '--i': i }} key={i}>
               <span className="white-letter">{char}</span>

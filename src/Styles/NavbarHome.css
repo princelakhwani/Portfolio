@@ -1,9 +1,10 @@
+/* Navbar */
 .navbar-home {
   position: fixed;
   top: 0;
   width: 100%;
   height: 80px;
-  background-color: black;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,7 +14,6 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-/* Apply bold and increase font size globally within navbar */
 .navbar-home,
 .navbar-home * {
   font-weight: bold !important;
@@ -34,7 +34,7 @@
   margin-right: 10px;
 }
 
-/* Animation for name (PrinceLakhwani) */
+/* Name animation */
 .name {
   display: inline-flex;
   overflow: hidden;
@@ -82,7 +82,7 @@
   opacity: 1;
 }
 
-/* Navbar center links */
+/* Center nav */
 .navbar-center {
   display: flex;
   gap: 2rem;
@@ -92,7 +92,6 @@
   margin-left: 7rem;
 }
 
-/* Animated nav links */
 .navlink-animated {
   display: inline-flex;
   overflow: hidden;
@@ -101,8 +100,6 @@
 }
 
 .navlink-animated .letter-wrapper {
-  position: relative;
-  display: inline-block;
   width: 1ch;
   height: 1em;
   overflow: hidden;
@@ -110,19 +107,17 @@
 
 .navlink-animated .white-letter,
 .navlink-animated .yellow-letter {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition-delay: calc(var(--i) * 40ms);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   text-align: center;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  transition-delay: calc(var(--i) * 40ms);
 }
 
 .navlink-animated .white-letter {
   color: #ccc;
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .navlink-animated .yellow-letter {
@@ -141,46 +136,32 @@
   opacity: 1;
 }
 
-/* Right-side buttons */
+/* Right side */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 1.2rem;
 }
 
-/* Resume Button Animation */
+/* Resume button */
 .resume {
   text-decoration: none;
   background-color: transparent;
   border-radius: 999px;
   padding: 0.6rem 1.2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
   display: inline-flex;
   overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .resume-animated {
-  background-color: transparent;
   color: #ccc;
 }
 
 .resume-animated .letter-wrapper {
-  position: relative;
-  display: inline-block;
   width: 1ch;
   height: 1em;
   overflow: hidden;
-}
-
-.resume-animated .white-letter,
-.resume-animated .yellow-letter {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  transition-delay: calc(var(--i) * 50ms);
 }
 
 .resume-animated .white-letter {
@@ -193,13 +174,11 @@
   color: white;
   transform: translateY(100%);
   opacity: 0;
-  font-weight: bold;
 }
 
 .resume-animated:hover {
   background-color: #313131;
   color: white;
-  font-weight: bold;
 }
 
 .resume-animated:hover .white-letter {
@@ -212,9 +191,8 @@
   opacity: 1;
 }
 
-/* CTA Button (Work With Me) Animated */
+/* CTA Button */
 .cta-button {
-  background-color: #1f1f1f;
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
   text-decoration: none;
@@ -222,32 +200,43 @@
   overflow: hidden;
 }
 
-/* Each letter container */
+/* Dark by default (home) */
+.work-animated {
+  background-color: #1f1f1f;
+}
+
+/* Light grey on non-home pages */
+.work-animated.work-other-page {
+  background-color: #d3d3d3;
+}
+
 .work-animated .letter-wrapper {
-  position: relative;
-  display: inline-block;
   width: 1ch;
   height: 1em;
   overflow: hidden;
 }
 
-/* Base styles for both layers */
 .work-animated .white-letter,
 .work-animated .yellow-letter {
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition-delay: calc(var(--i) * 30ms);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   text-align: center;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-  transition-delay: calc(var(--i) * 30ms); /* Faster stagger */
 }
 
-/* Default state */
+/* Default text */
 .work-animated .white-letter {
   color: white;
   transform: translateY(0);
   opacity: 1;
+}
+
+/* Override white text to black on other pages */
+.work-animated.work-other-page .white-letter {
+  color: black;
 }
 
 .work-animated .yellow-letter {
@@ -256,7 +245,7 @@
   opacity: 0;
 }
 
-/* Hover styles */
+/* Hover same everywhere */
 .work-animated:hover {
   background-color: #ffc400;
   color: black;
@@ -270,4 +259,13 @@
 .work-animated:hover .yellow-letter {
   transform: translateY(0);
   opacity: 1;
+}
+
+/* Optional: text color for name and nav items on non-home */
+.navbar-white .white-letter {
+  color: white;
+}
+
+.navbar-black .white-letter {
+  color: black;
 }
