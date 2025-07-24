@@ -229,3 +229,87 @@
     font-size: 0.9rem;
   }
 } 
+
+/* For tablets (portrait & landscape) */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-right {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-available-corner,
+  .hero-mostly-corner {
+    position: static;
+    text-align: left;
+    margin-top: 1rem;
+  }
+}
+
+/* For extra small phones (below 360px) */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .dot-text,
+  .available-label {
+    font-size: 0.9rem;
+  }
+
+  .sticky-note {
+    font-size: 0.85rem;
+    padding: 0.1em 0.5em;
+  }
+
+  .play-label {
+    font-size: 0.8rem;
+  }
+
+  .play-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .play-icon {
+    font-size: 1.2rem;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* For large desktop screens */
+@media (min-width: 1440px) {
+  .hero-section {
+    padding: 3rem 6rem;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-image {
+    width: 420px;
+    height: 300px;
+  }
+
+  .play-label {
+    font-size: 1.2rem;
+  }
+}
