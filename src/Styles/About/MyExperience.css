@@ -1,0 +1,100 @@
+.experience-section {
+  padding: 4rem 8vw;
+  background-color: #fff;
+}
+
+/* Header: Full width */
+.experience-header {
+  margin-bottom: 2rem;
+}
+
+.breadcrumb {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.experience-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+
+.section-divider {
+  margin-top: 1.5rem;
+  height: 1px;
+  background-color: #eee;
+  width: 100%;
+}
+
+/* Grid layout: intro left, experience right */
+.experience-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem; /* Increase gap for spacing */
+  flex-wrap: wrap;
+}
+
+
+.experience-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.experience-intro {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.experience-right {
+  flex: 1;
+  max-width: 320px;
+  margin-left: auto; /* Push to right side */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.experience-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #fbbc04;
+  border-radius: 2px;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.experience-info {
+  font-size: 1.05rem;
+  color: #111;
+  line-height: 1.4;
+}
+
+.experience-info a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.experience-info a:hover {
+  text-decoration: underline;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
