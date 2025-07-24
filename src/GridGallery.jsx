@@ -6,19 +6,19 @@ const cards = [
     label: 'ENTERTAINMENT',
     year: '22',
     title: 'CRITIK',
-    image: 'https://via.placeholder.com/300x300?text=Image+1',
+    image: '/src/assets/iic.jpg',
   },
   {
     label: 'PLAYGROUND',
     year: '',
     title: 'EXPLORATIONS',
-    image: 'https://via.placeholder.com/300x300?text=Image+2',
+    image: '/src/assets/Aman.jpg',
   },
   {
     label: 'FINTECH',
     year: '20',
     title: 'ACCOUNTABLE',
-    image: 'https://via.placeholder.com/300x300?text=Image+3',
+    image: '/src/assets/Resume.jpg',
   },
 ];
 

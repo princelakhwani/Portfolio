@@ -6,11 +6,13 @@ import Grid from '../GridGallery';
 
 function Home() {
   return (
-    <>
-      <Hero />
-      <Grid />
+    <div className="home-page"> {/* <-- wrapper with full height */}
+      <div className="home-content">
+        <Hero />
+        <Grid />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
