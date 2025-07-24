@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 .grid-bg {
-  min-height: 50vh;
-  background: black;
+  min-height: 30vh;
+  background: #111;
   background-image: linear-gradient(transparent 23px, #222 24px), linear-gradient(90deg, transparent 23px, #222 24px);
   background-size: 24px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 .gallery-row {
   display: flex;
@@ -23,9 +23,9 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
   overflow: visible;
   position: relative;
-  width: 320px;
-  min-width: 220px;
-  margin-bottom: 2rem;
+  width: 270px;
+  min-width: 140px;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,7 @@
   position: absolute;
   top: -1.2em;
   left: 1.2em;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   transform: rotate(-6deg);
   z-index: 2;
@@ -56,14 +56,14 @@
   top: 0.5em;
   right: 1.2em;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-family: 'Inter', Arial, sans-serif;
   font-weight: bold;
   text-shadow: 1px 1px 2px #111;
 }
 .card-img {
   width: 90%;
-  height: 220px;
+  height: 180px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
   background: #222;
@@ -73,7 +73,7 @@
 .card-title {
   font-family: 'Permanent Marker', cursive;
   color: #b94a2c;
-  font-size: 2rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px #b6a98c;
   margin: 1.2em 0 0.7em 0;

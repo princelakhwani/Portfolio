@@ -12,8 +12,8 @@ const Hero = () => {
     <section className={`hero-section${fadeIn ? ' fade-in-bottom' : ''}`}>
       <div className="hero-left">
         <div className="dot-label">
-          <span className="dot" />
-          <span className="dot-text">MOSTLY 2020-2023</span>
+          {/* <span className="dot" /> */}
+          {/* <span className="dot-text">MOSTLY 2020-2023</span> */}
         </div>
         <h1 className="hero-title">
           <span
