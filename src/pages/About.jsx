@@ -4,6 +4,7 @@ import AboutHero from "/src/component/About/Abouthero.jsx"; // Adjust path if ne
 import Aboutmain from "../component/About/Aboutmain";
 import Services from "../component/About/Service";
 import MyExperience from "../component/About/MyExperience";
+import Footer from "../component/Footer";
 
 const About = () => {
   return (
@@ -12,6 +13,7 @@ const About = () => {
       <Aboutmain />
       <Services />
       <MyExperience />
+      <Footer/>
     </div>
   );
 };

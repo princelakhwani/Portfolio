@@ -1,0 +1,138 @@
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 6rem 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Top Columns */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-label {
+  color: #999;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-email {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.footer-col p:not(.footer-label):not(.footer-email) {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-col p:not(.footer-label):not(.footer-email):hover {
+  color: #facc15;
+}
+
+/* Link wrapping entire CTA */
+.footer-cta-link {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* CTA container */
+.footer-cta-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-cta-link:hover .footer-cta-container {
+  transform: translateY(-8px);
+}
+
+/* CTA Text */
+.footer-cta-text {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #f3f3f3;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Line between text and arrow */
+.footer-cta-line {
+  flex: 1;
+  height: 1px;
+  background-color: #888;
+  min-width: 80px;
+}
+
+/* White bubble just for arrow */
+.footer-arrow-bubble {
+  width: 72px;
+  height: 72px;
+  background: white;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+/* Arrow inside bubble */
+.arrow {
+  font-size: 2.2rem;
+  color: black;
+}
+
+/* Bubble hover */
+.footer-arrow-bubble:hover {
+  background: #facc15;
+}
+
+.footer-arrow-bubble:hover .arrow {
+  color: black;
+}
+
+/* Bottom section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 2rem;
+}
+
+.footer-socials span {
+  margin-right: 2rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-socials span:hover {
+  color: white;
+}
+
+.footer-credit {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
