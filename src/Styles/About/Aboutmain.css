@@ -1,5 +1,3 @@
-/* src/Styles/About/Aboutmain.css */
-
 .about-main {
   display: flex;
   flex-wrap: wrap;
@@ -7,20 +5,23 @@
   background-color: #fff;
   color: #000;
   gap: 3rem;
+  min-height: 100vh;
 }
 
 .about-left {
   flex: 1 1 40%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 
 .image-wrapper {
-  position: relative;
+  position: sticky;
+  top: 100px;
   width: 100%;
   max-width: 500px;
+  transition: transform 0.3s ease;
 }
 
 .about-img {
@@ -59,6 +60,15 @@
 .about-right {
   flex: 1 1 50%;
   max-width: 700px;
+  display: flex;
+  justify-content: center; /* vertical centering */
+  align-items: flex-end;   /* align to right */
+  padding: 2rem 0;
+}
+
+.about-content-wrapper {
+  width: 100%;
+  max-width: 600px;
 }
 
 .section-label {
@@ -71,7 +81,7 @@
 
 .intro-text,
 .story-text {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.8;
   margin-bottom: 2rem;
 }
@@ -81,7 +91,7 @@
 }
 
 .tldr-label {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   color: gray;
   margin-bottom: 0.75rem;
@@ -92,10 +102,11 @@
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .tldr-bar {
   width: 4px;
   height: 1.25rem;
-  background-color: #f5c347; /* yellow-orange shade */
+  background-color: #f5c347;
 }
