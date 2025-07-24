@@ -1,0 +1,77 @@
+.services-section {
+  padding: 4rem 8vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.services-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.breadcrumb {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.services-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  color: #000;
+}
+
+.services-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.description {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.skills-list {
+  flex: 0 0 300px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.skill::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #f4b731;
+  margin-right: 10px;
+  border-radius: 1px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.skill.disabled {
+  color: #b5b5b5;
+}
