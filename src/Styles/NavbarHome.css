@@ -269,3 +269,14 @@
 .navbar-black .white-letter {
   color: black;
 }
+
+/* Hide on scroll */
+.navbar-home.hide {
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar-home.show {
+  transform: translateY(0);
+  transition: transform 0.4s ease-in-out;
+}

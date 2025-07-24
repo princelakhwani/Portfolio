@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '/src/Styles/NavbarHome.css';
 
 function NavbarHome() {
   const location = useLocation();
   const isHome = location.pathname === '/';
+
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        setShowNavbar(false); // Scrolling down
+      } else {
+        setShowNavbar(true); // Scrolling up
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const navLinks = [
     { label: 'SELECTED WORKS', href: '#works', type: 'anchor' },
@@ -13,7 +33,7 @@ function NavbarHome() {
   ];
 
   return (
-    <nav className={`navbar-home ${isHome ? 'navbar-white' : 'navbar-black'}`}>
+    <nav className={`navbar-home ${isHome ? 'navbar-white' : 'navbar-black'} ${showNavbar ? 'show' : 'hide'}`}>
       <div className="navbar-left">
         <span className="dot" />
         <Link to="/" className="name">
