@@ -93,8 +93,8 @@
 .scroll-indicator {
   position: absolute;
   bottom: 1.5rem;
-  left: 2rem;
-  font-size: 3.5rem;
+  left: 8rem;
+  font-size: 7rem;
   color: #aaa;
   z-index: 2;
 }
