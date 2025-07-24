@@ -1,0 +1,101 @@
+/* src/Styles/About/Aboutmain.css */
+
+.about-main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  color: #000;
+  gap: 3rem;
+}
+
+.about-left {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border-radius: 8px;
+}
+
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 30px;
+  background: #d8c7a8;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+}
+
+.sticker {
+  position: absolute;
+  bottom: -20px;
+  right: 10%;
+  background: #aac8ff;
+  color: #000;
+  font-weight: bold;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  transform: rotate(-15deg);
+  font-size: 0.9rem;
+}
+
+.about-right {
+  flex: 1 1 50%;
+  max-width: 700px;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: gray;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.intro-text,
+.story-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.tldr-section {
+  margin-bottom: 2rem;
+}
+
+.tldr-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: gray;
+  margin-bottom: 0.75rem;
+}
+
+.tldr-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.tldr-bar {
+  width: 4px;
+  height: 1.25rem;
+  background-color: #f5c347; /* yellow-orange shade */
+}
