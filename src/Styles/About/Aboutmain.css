@@ -18,18 +18,18 @@
 
 .image-wrapper {
   position: sticky;
-  top: 100px;
-  width: 100%;
+  top: 75px;
+  width: 100vw;
   max-width: 500px;
   transition: transform 0.3s ease;
 }
 
 .about-img {
   width: 100%;
-  height: auto;
+  height: 80vh;
   object-fit: cover;
   filter: grayscale(100%);
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .tape {
