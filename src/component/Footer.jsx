@@ -1,9 +1,35 @@
-import React from "react";
+// Footer.jsx
+import React, { useRef, useEffect, useState } from "react";
 import "/src/Styles/Footer.css";
 
 const Footer = () => {
+  const footerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <footer className="footer">
+    <footer
+      ref={footerRef}
+      className={`footer ${isVisible ? "footer-visible" : "footer-hidden"}`}
+    >
       <div className="footer-columns">
         <div className="footer-col">
           <p className="footer-label">/REACH ME</p>
@@ -23,7 +49,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Full clickable CTA section */}
       <a href="#contact" className="footer-cta-link">
         <div className="footer-cta-container">
           <h1 className="footer-cta-text">Let’s create together</h1>

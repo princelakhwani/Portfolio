@@ -6,6 +6,23 @@
   flex-direction: column;
   gap: 5rem;
   font-family: 'Inter', sans-serif;
+
+  /* Animation start state */
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+/* When footer is visible in viewport */
+.footer-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Optional: for smoother initial load */
+.footer-hidden {
+  transform: translateY(100px);
+  opacity: 0;
 }
 
 /* Top Columns */
@@ -95,13 +112,11 @@
   transition: background 0.3s ease;
 }
 
-/* Arrow inside bubble */
 .arrow {
   font-size: 2.2rem;
   color: black;
 }
 
-/* Bubble hover */
 .footer-arrow-bubble:hover {
   background: #facc15;
 }
