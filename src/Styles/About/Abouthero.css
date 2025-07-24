@@ -65,7 +65,7 @@
 }
 
 .breadcrumb {
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
   color: #888;
   margin-bottom: 1rem;
 }
