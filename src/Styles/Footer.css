@@ -7,19 +7,16 @@
   gap: 5rem;
   font-family: 'Inter', sans-serif;
 
-  /* Animation start state */
   transform: translateY(100px);
   opacity: 0;
   transition: all 0.8s ease-out;
 }
 
-/* When footer is visible in viewport */
 .footer-visible {
   transform: translateY(0);
   opacity: 1;
 }
 
-/* Optional: for smoother initial load */
 .footer-hidden {
   transform: translateY(100px);
   opacity: 0;
@@ -50,20 +47,30 @@
   font-weight: 600;
   font-size: 1.3rem;
   color: #fff;
-}
-
-.footer-col p:not(.footer-label):not(.footer-email) {
-  font-size: 1.2rem;
+  text-decoration: none;
+  display: block;
   margin: 0.5rem 0;
-  cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.footer-col p:not(.footer-label):not(.footer-email):hover {
+.footer-email:hover {
   color: #facc15;
 }
 
-/* Link wrapping entire CTA */
+.footer-link {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #facc15;
+}
+
+/* CTA link */
 .footer-cta-link {
   text-decoration: none;
   color: inherit;
@@ -71,7 +78,6 @@
   max-width: 100%;
 }
 
-/* CTA container */
 .footer-cta-container {
   display: flex;
   align-items: center;
@@ -83,7 +89,6 @@
   transform: translateY(-8px);
 }
 
-/* CTA Text */
 .footer-cta-text {
   font-size: 5rem;
   font-weight: 700;
@@ -92,7 +97,6 @@
   white-space: nowrap;
 }
 
-/* Line between text and arrow */
 .footer-cta-line {
   flex: 1;
   height: 1px;
@@ -100,7 +104,6 @@
   min-width: 80px;
 }
 
-/* White bubble just for arrow */
 .footer-arrow-bubble {
   width: 72px;
   height: 72px;
@@ -142,6 +145,20 @@
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
+
+.footer-social-link {
+  margin-right: 2rem;
+  font-size: 1.1rem;
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-social-link:hover {
+  color: white;
+}
+
 
 .footer-socials span:hover {
   color: white;

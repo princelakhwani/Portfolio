@@ -20,7 +20,7 @@ function Footer() {
     <footer className="custom-footer">
       <div className="footer-left">
         <a
-          href="https://vimeo.com"
+          href="https://www.linkedin.com/in/princelakhwani/"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-link-animated"
@@ -28,15 +28,15 @@ function Footer() {
           <AnimatedText text="LINKEDIN ↗" />
         </a>
         <a
-          href="https://are.na"
+          href="https://github.com/princelakhwani"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-link-animated"
         >
-          <AnimatedText text="WHATSAPP ↗" />
+          <AnimatedText text="Github ↗" />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.instagram.com/prince_lakhwani_06/"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-link-animated"
@@ -45,7 +45,7 @@ function Footer() {
         </a>
       </div>
       <div className="footer-right">
-        <a href="#" className="footer-link-animated listen-button">
+        <a href="https://open.spotify.com/playlist/37i9dQZF1EJAsIdcvuuRRT" className="footer-link-animated listen-button">
           <img src={spotifyIcon} alt="Spotify" className="spotify-icon" />
           <AnimatedText text="LISTEN" />
         </a>
