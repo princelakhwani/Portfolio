@@ -29,7 +29,6 @@ function NavbarHome() {
   const navLinks = [
     { label: 'SELECTED WORKS', href: '#works', type: 'anchor' },
     { label: 'ABOUT ME', href: '/about', type: 'route' },
-    { label: 'PLAYGROUND', href: '#playground', type: 'anchor' },
   ];
 
   return (

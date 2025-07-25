@@ -20,7 +20,7 @@ const Hero = () => {
             className="fade-in-line"
             style={{ animationDelay: fadeIn ? '0.1s' : '0s' }}
           >
-            Designer,
+            Developer,
           </span>
           <br />
           <span
@@ -34,9 +34,9 @@ const Hero = () => {
             className="fade-in-line"
             style={{ animationDelay: fadeIn ? '0.9s' : '0s' }}
           >
-            harmony hunter.
-            <span className="emoji">🎵</span>
-            <span className="sticky-note">PRODUCT</span>
+            AI enthusiast.
+            <span className="emoji">🤖</span>
+            <span className="sticky-note">mindset</span>
           </span>
         </h1>
         <div className="hero-actions">
