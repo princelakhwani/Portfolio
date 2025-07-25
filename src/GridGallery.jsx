@@ -2,8 +2,8 @@ import React from 'react';
 import './GridGallery.css';
 
 // ✅ Import local images properly
-import iicImage from './assets/work.jpeg';
-import amanImage from './assets/prince2.jpeg';
+import workImage from './assets/work.jpeg';
+import princeImage from './assets/prince2.jpeg';
 import resumeImage from './assets/paper-resume.jpeg';
 
 const cards = [
@@ -11,14 +11,14 @@ const cards = [
     label: 'SELECTED WORKS',
     year: '23',
     title: 'SHOWCASE',
-    image: iicImage,
+    image: workImage,
     url: 'https://example.com/critik',
   },
   {
     label: 'ABOUT ME',
     year: '',
     title: 'EXPLORATIONS',
-    image: amanImage,
+    image: princeImage,
     url: 'https://example.com/explorations',
   },
   {
