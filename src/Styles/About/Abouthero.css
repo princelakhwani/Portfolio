@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 /* Top-right quote */
@@ -99,17 +100,40 @@
   z-index: 2;
 }
 
-/* Responsive Design */
+/* ================= Responsive Breakpoints ================== */
+
+@media (max-width: 1024px) {
+  .abouthero-container {
+    padding: 3rem 2rem;
+  }
+
+  .intro {
+    font-size: 2.5rem;
+  }
+
+  .large-text {
+    font-size: 3rem;
+  }
+
+  .scroll-indicator {
+    left: 4rem;
+    font-size: 6rem;
+  }
+}
+
 @media (max-width: 768px) {
   .abouthero-container {
-    padding: 3rem 1.5rem;
     flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
   }
 
   .quote-section {
     position: static;
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 2rem;
   }
 
   .abouthero-content {
@@ -128,5 +152,39 @@
   .scroll-indicator {
     left: 50%;
     transform: translateX(-50%);
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .abouthero-container {
+    padding: 2rem 1rem;
+  }
+
+  .intro {
+    font-size: 1.8rem;
+  }
+
+  .large-text {
+    font-size: 2.2rem;
+  }
+
+  .breadcrumb {
+    font-size: 1rem !important;
+  }
+
+  .head {
+    width: 60px;
+    height: 60px;
+  }
+
+  .body {
+    width: 90px;
+    height: 50px;
+  }
+
+  .scroll-indicator {
+    font-size: 4rem;
+    bottom: 1rem;
   }
 }

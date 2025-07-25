@@ -8,6 +8,7 @@
   min-height: 100vh;
 }
 
+/* Left side with image */
 .about-left {
   flex: 1 1 40%;
   display: flex;
@@ -32,6 +33,7 @@
   border-radius: 6px;
 }
 
+/* Decorative elements */
 .tape {
   position: absolute;
   top: -10px;
@@ -57,12 +59,13 @@
   font-size: 0.9rem;
 }
 
+/* Right side with text */
 .about-right {
   flex: 1 1 50%;
   max-width: 700px;
   display: flex;
-  justify-content: center; /* vertical centering */
-  align-items: flex-end;   /* align to right */
+  justify-content: center;
+  align-items: flex-end;
   padding: 2rem 0;
 }
 
@@ -71,6 +74,7 @@
   max-width: 600px;
 }
 
+/* Text Styling */
 .section-label {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -109,4 +113,112 @@
   width: 4px;
   height: 1.25rem;
   background-color: #f5c347;
+}
+
+/* ===================== Responsive Breakpoints ===================== */
+
+@media (max-width: 1024px) {
+  .about-main {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-right {
+    align-items: center;
+  }
+
+  .intro-text,
+  .story-text {
+    font-size: 1.15rem;
+  }
+
+  .tldr-line {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-main {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+  }
+
+  .about-left,
+  .about-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .about-content-wrapper {
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .image-wrapper {
+    position: relative;
+    top: auto;
+    max-width: 80%;
+  }
+
+  .about-img {
+    height: auto;
+    max-height: 60vh;
+  }
+
+  .tape {
+    width: 100px;
+    height: 25px;
+  }
+
+  .sticker {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    bottom: -15px;
+  }
+
+  .intro-text,
+  .story-text {
+    font-size: 1.1rem;
+  }
+
+  .large-text {
+    font-size: 2rem;
+  }
+
+  .tldr-line {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-main {
+    padding: 2.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .about-content-wrapper {
+    padding: 0;
+  }
+
+  .intro-text,
+  .story-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .tldr-line {
+    font-size: 0.95rem;
+  }
+
+  .tape {
+    width: 80px;
+    height: 20px;
+  }
+
+  .sticker {
+    font-size: 0.75rem;
+    bottom: -12px;
+  }
 }
