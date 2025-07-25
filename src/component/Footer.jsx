@@ -1,10 +1,12 @@
-// Footer.jsx
 import React, { useRef, useEffect, useState } from "react";
+import { useLocation, useNavigate } from 'react-router-dom';
 import "/src/Styles/Footer.css";
 
 const Footer = () => {
   const footerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,6 +27,14 @@ const Footer = () => {
     };
   }, []);
 
+  const handleNavClick = (path) => {
+    if (location.pathname === path) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate(path);
+    }
+  };
+
   return (
     <footer
       ref={footerRef}
@@ -43,9 +53,9 @@ const Footer = () => {
 
         <div className="footer-col">
           <p className="footer-label">/NAVIGATE TO</p>
-          <a href="/" className="footer-link">Home</a>
-          <a href="#works" className="footer-link">Selected works</a>
-          <a href="/about" className="footer-link">Info</a>
+          <span onClick={() => handleNavClick('/')} className="footer-link">Home</span>
+          <span onClick={() => handleNavClick('/work')} className="footer-link">Selected works</span>
+          <span onClick={() => handleNavClick('/about')} className="footer-link">Info</span>
         </div>
 
         <div className="footer-col">
@@ -63,7 +73,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
-            download={true} // Ensure the resume is downloadable
+            download={true}
           >
             My resume
           </a>
@@ -82,31 +92,31 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="footer-socials">
-            <a
-              href="https://linkedin.com/in/princelakhwani"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-social-link"
-            >
-              LINKEDIN ↗
-            </a>
-            <a
-              href="https://github.com/princelakhwani"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-social-link"
-            >
-              GITHUB ↗
-            </a>
-            <a
-              href="https://www.instagram.com/prince_lakhwani_06/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-social-link"
-            >
-              INSTAGRAM ↗
-            </a>
-          </div>
+          <a
+            href="https://linkedin.com/in/princelakhwani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-social-link"
+          >
+            LINKEDIN ↗
+          </a>
+          <a
+            href="https://github.com/princelakhwani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-social-link"
+          >
+            GITHUB ↗
+          </a>
+          <a
+            href="https://www.instagram.com/prince_lakhwani_06/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-social-link"
+          >
+            INSTAGRAM ↗
+          </a>
+        </div>
         <p className="footer-credit">DEVELOP & BUILT WITH 💛 BY ME</p>
       </div>
     </footer>
