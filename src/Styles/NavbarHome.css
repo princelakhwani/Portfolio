@@ -1,4 +1,4 @@
-/* Navbar */
+/* Base Navbar Styles */
 .navbar-home {
   position: fixed;
   top: 0;
@@ -12,6 +12,8 @@
   color: white;
   z-index: 100;
   font-family: 'Courier New', Courier, monospace;
+  transition: transform 0.4s ease-in-out;
+  flex-wrap: wrap;
 }
 
 .navbar-home,
@@ -20,6 +22,7 @@
   font-size: 1rem !important;
 }
 
+/* Left */
 .navbar-left {
   display: flex;
   align-items: center;
@@ -90,6 +93,7 @@
   justify-content: flex-start;
   flex: 1;
   margin-left: 7rem;
+  flex-wrap: wrap;
 }
 
 .navlink-animated {
@@ -141,9 +145,10 @@
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
-/* Resume button */
+/* Resume Button */
 .resume {
   text-decoration: none;
   background-color: transparent;
@@ -205,7 +210,6 @@
   background-color: #1f1f1f;
 }
 
-/* Light grey on non-home pages */
 .work-animated.work-other-page {
   background-color: #d3d3d3;
 }
@@ -227,14 +231,12 @@
   text-align: center;
 }
 
-/* Default text */
 .work-animated .white-letter {
   color: white;
   transform: translateY(0);
   opacity: 1;
 }
 
-/* Override white text to black on other pages */
 .work-animated.work-other-page .white-letter {
   color: black;
 }
@@ -245,7 +247,6 @@
   opacity: 0;
 }
 
-/* Hover same everywhere */
 .work-animated:hover {
   background-color: #ffc400;
   color: black;
@@ -261,7 +262,7 @@
   opacity: 1;
 }
 
-/* Optional: text color for name and nav items on non-home */
+/* Color scheme toggles */
 .navbar-white .white-letter {
   color: white;
 }
@@ -270,13 +271,89 @@
   color: black;
 }
 
-/* Hide on scroll */
+/* Scroll hide/show */
 .navbar-home.hide {
   transform: translateY(-100%);
-  transition: transform 0.4s ease-in-out;
 }
 
 .navbar-home.show {
   transform: translateY(0);
-  transition: transform 0.4s ease-in-out;
+}
+
+/* ======= RESPONSIVE MEDIA QUERIES ======= */
+
+@media (max-width: 1024px) {
+  .navbar-home {
+    padding: 0 1rem;
+  }
+
+  .navbar-center {
+    margin-left: 4rem;
+    gap: 1.5rem;
+  }
+
+  .resume,
+  .cta-button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-home {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .navbar-center {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .name {
+    font-size: 1.2rem !important;
+  }
+
+  .resume,
+  .cta-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-home {
+    padding: 1rem;
+  }
+
+  .navbar-left {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-center,
+  .navbar-right {
+    gap: 0.6rem;
+  }
+
+  .resume,
+  .cta-button {
+    font-size: 0.8rem !important;
+  }
+
+  .navlink-animated {
+    font-size: 0.9rem !important;
+  }
 }
