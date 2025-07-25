@@ -46,7 +46,6 @@ const Footer = () => {
           <a href="/" className="footer-link">Home</a>
           <a href="#works" className="footer-link">Selected works</a>
           <a href="/about" className="footer-link">Info</a>
-          <a href="/playground" className="footer-link">Playground</a>
         </div>
 
         <div className="footer-col">
@@ -60,10 +59,11 @@ const Footer = () => {
             LinkedIn
           </a>
           <a
-            href="/resume.pdf"
+            href="/src/assets/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
+            download={true} // Ensure the resume is downloadable
           >
             My resume
           </a>
@@ -83,22 +83,6 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-socials">
             <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-social-link"
-            >
-              TWITTER ↗
-            </a>
-            <a
-              href="https://behance.net/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-social-link"
-            >
-              BEHANCE ↗
-            </a>
-            <a
               href="https://linkedin.com/in/princelakhwani"
               target="_blank"
               rel="noopener noreferrer"
@@ -106,8 +90,24 @@ const Footer = () => {
             >
               LINKEDIN ↗
             </a>
+            <a
+              href="https://github.com/princelakhwani"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social-link"
+            >
+              GITHUB ↗
+            </a>
+            <a
+              href="https://www.instagram.com/prince_lakhwani_06/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social-link"
+            >
+              INSTAGRAM ↗
+            </a>
           </div>
-        <p className="footer-credit">DESIGNED & BUILT WITH 💛 BY ME</p>
+        <p className="footer-credit">DEVELOP & BUILT WITH 💛 BY ME</p>
       </div>
     </footer>
   );
