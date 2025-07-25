@@ -74,9 +74,10 @@ function NavbarHome() {
       <div className="navbar-right">
         <a
           className="resume resume-animated"
-          href="/resume.pdf"
+          href="/src/assets/Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
+          download // ✅ Add this
         >
           {'My Resume ↗'.split('').map((char, i) => (
             <span className="letter-wrapper" style={{ '--i': i }} key={i}>
