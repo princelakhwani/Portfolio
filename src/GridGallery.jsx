@@ -2,29 +2,29 @@ import React from 'react';
 import './GridGallery.css';
 
 // ✅ Import local images properly
-import iicImage from './assets/iic.jpg';
-import amanImage from './assets/Aman.jpg';
-import resumeImage from './assets/Resume.jpg';
+import iicImage from './assets/work.jpeg';
+import amanImage from './assets/prince2.jpeg';
+import resumeImage from './assets/paper-resume.jpeg';
 
 const cards = [
   {
-    label: 'ENTERTAINMENT',
-    year: '22',
-    title: 'CRITIK',
+    label: 'SELECTED WORKS',
+    year: '23',
+    title: 'SHOWCASE',
     image: iicImage,
     url: 'https://example.com/critik',
   },
   {
-    label: 'PLAYGROUND',
+    label: 'ABOUT ME',
     year: '',
     title: 'EXPLORATIONS',
     image: amanImage,
     url: 'https://example.com/explorations',
   },
   {
-    label: 'FINTECH',
+    label: 'MY RESUME',
     year: '20',
-    title: 'ACCOUNTABLE',
+    title: 'CREDENTIALS',
     image: resumeImage,
     url: 'https://example.com/accountable',
   },
