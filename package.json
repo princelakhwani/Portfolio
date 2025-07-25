@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^12.23.9",
     "locomotive-scroll": "^4.1.4",
     "lottie-react": "^2.4.1",
     "react": "^19.1.0",

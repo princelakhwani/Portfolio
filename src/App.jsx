@@ -1,21 +1,42 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 import NavbarHome from './component/NavbarHome';
 import Home from './pages/Home';
-import About from './pages/About'; // ✅ Import your About page
+import About from './pages/About';
 import CustomCursor from '/src/component/CustomCursor.jsx';
+import PageTransition from '/src/component/PageTransition.jsx';
+import Loader from '/src/component/Loader.jsx';
+
+import { useState } from 'react';
+
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <PageTransition>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </PageTransition>
+  );
+}
 
 function App() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <Router>
-      <CustomCursor />
-      <NavbarHome />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} /> 
-        {/* <Routes path="/works" element={<Works />} />  */}
-      </Routes>
+      {!loaded ? (
+        <Loader onLoaded={() => setLoaded(true)} />
+      ) : (
+        <>
+          <CustomCursor />
+          <NavbarHome />
+          <AnimatedRoutes />
+        </>
+      )}
     </Router>
   );
 }
