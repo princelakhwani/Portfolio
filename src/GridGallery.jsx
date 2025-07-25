@@ -13,7 +13,7 @@ const cards = [
     title: 'SHOWCASE',
     image: workImage,
     url: 'https://example.com/critik',
-    isExternal: true,
+    type: 'external',
   },
   {
     label: 'ABOUT ME',
@@ -21,15 +21,15 @@ const cards = [
     title: 'EXPLORATIONS',
     image: princeImage,
     url: '/about',
-    isExternal: false,
+    type: 'internal',
   },
   {
     label: 'MY RESUME',
     year: '20',
     title: 'CREDENTIALS',
     image: resumeImage,
-    url: 'https://example.com/accountable',
-    isExternal: true,
+    url: '/src/assets/Resume.pdf', // This should be in the public folder
+    type: 'download',
   },
 ];
 
@@ -46,21 +46,26 @@ const Grid = () => (
           </>
         );
 
+        let linkComponent;
+        if (card.type === 'external') {
+          linkComponent = (
+            <a href={card.url} target="_blank" rel="noopener noreferrer">
+              {content}
+            </a>
+          );
+        } else if (card.type === 'internal') {
+          linkComponent = <Link to={card.url}>{content}</Link>;
+        } else if (card.type === 'download') {
+          linkComponent = (
+            <a href={card.url} target="_blank" rel="noopener noreferrer" download>
+              {content}
+            </a>
+          );
+        }
+
         return (
           <div className="photo-card" key={idx}>
-            {card.isExternal ? (
-              <a
-                href={card.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {content}
-              </a>
-            ) : (
-              <Link to={card.url}>
-                {content}
-              </Link>
-            )}
+            {linkComponent}
           </div>
         );
       })}
