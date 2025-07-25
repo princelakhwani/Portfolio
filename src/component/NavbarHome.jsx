@@ -86,9 +86,9 @@ function NavbarHome() {
             </span>
           ))}
         </a>
-        <a
+       <Link
+          to="/contact"
           className={`cta-button work-animated ${!isHome ? 'work-other-page' : ''}`}
-          href="#contact"
         >
           {'WORK WITH ME ↗'.split('').map((char, i) => (
             <span className="letter-wrapper" style={{ '--i': i }} key={i}>
@@ -96,7 +96,7 @@ function NavbarHome() {
               <span className="yellow-letter">{char}</span>
             </span>
           ))}
-        </a>
+        </Link>
       </div>
     </nav>
   );

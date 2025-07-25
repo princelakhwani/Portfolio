@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "/src/Styles/Footer.css";
 
 const Footer = () => {
@@ -80,7 +81,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <a href="#contact" className="footer-cta-link">
+      <Link to="/contact" smooth className="footer-cta-link">
         <div className="footer-cta-container">
           <h1 className="footer-cta-text">Let’s create together</h1>
           <div className="footer-cta-line"></div>
@@ -88,7 +89,8 @@ const Footer = () => {
             <span className="arrow">→</span>
           </div>
         </div>
-      </a>
+      </Link>
+
 
       <div className="footer-bottom">
         <div className="footer-socials">
