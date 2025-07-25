@@ -27,7 +27,7 @@ function NavbarHome() {
   }, [lastScrollY]);
 
   const navLinks = [
-    { label: 'SELECTED WORKS', href: '#works', type: 'anchor' },
+    { label: 'SELECTED WORKS', href: '/work', type: 'route' },
     { label: 'ABOUT ME', href: '/about', type: 'route' },
   ];
 

@@ -12,8 +12,8 @@ const cards = [
     year: '23',
     title: 'SHOWCASE',
     image: workImage,
-    url: 'https://example.com/critik',
-    type: 'external',
+    url: '/work',
+    type: 'internal',
   },
   {
     label: 'ABOUT ME',
