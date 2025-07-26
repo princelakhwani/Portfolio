@@ -52,8 +52,9 @@
 }
 
 .folder-icon {
-  width: 70px;
+  width: 110px;
   margin-bottom: 16px;
+  margin-top: 0px;
 }
 
 .arrow-wrapper {
@@ -100,7 +101,8 @@
   flex-direction: column;
   gap: 80px;
   max-width: 100%;
-  padding: 0px 24px;
+  padding: 0px 0px;
+  margin-top: 0px;
 }
 
 .work-entry {
@@ -221,7 +223,7 @@
 }
 
 .project-divider {
-  margin: 40px 0 0;
+  margin: 25px 0 0;
   border: none;
   height: 1px;
   background-color: #e0e0e0;
@@ -229,6 +231,29 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.project-row {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-top: 0px;
+}
+
+.project-half {
+  width: 50vw;
+  padding: 0 2%;
+}
+
+.project-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #e0e0e0;
+  z-index: 1;
 }
 
 

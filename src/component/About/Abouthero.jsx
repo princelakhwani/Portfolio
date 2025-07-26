@@ -35,7 +35,9 @@ function Abouthero() {
       </div>
 
       <div className="scroll-indicator">
-        <span>↓</span>
+        <div className="arrow-wrapper">
+          <span className="material-icons scroll-arrow">arrow_downward</span>
+        </div>
       </div>
     </section>
   );
