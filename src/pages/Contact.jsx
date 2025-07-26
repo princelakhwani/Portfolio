@@ -18,9 +18,13 @@ const Contact = () => {
 
           <p className="label">College</p>
           <p>
-            Manipal University Jaipur, Bagru,<br/> Jaipur, Rajasthan
+            Manipal University Jaipur, Bagru,<br /> Jaipur, Rajasthan
           </p>
-          <a href="https://www.google.com/maps/place/Manipal+University+Jaipur/@26.8438552,75.5626594,17z/data=!3m1!4b1!4m6!3m5!1s0x396c4850e05bee9b:0x1b8d67402d4eb863!8m2!3d26.8438552!4d75.5652343!16s%2Fm%2F0wdnw8v?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.google.com/maps/place/Manipal+University+Jaipur/@26.8438552,75.5626594,17z"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             See on Google Map ↗
           </a>
         </div>
@@ -41,16 +45,24 @@ const Contact = () => {
 
         <div className="form-box">
           <h3>Contact</h3>
-          <form className="contact-form">
+          <form
+            className="contact-form"
+            action="https://formsubmit.co/princelakhwani1608@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting me! I will get back to you soon." />
+
             <div className="form-row">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="email" name="email" placeholder="Email" required />
             </div>
             <div className="form-row">
-              <input type="text" placeholder="Phone" />
-              <input type="text" placeholder="Subject" />
+              <input type="text" name="phone" placeholder="Phone" />
+              <input type="text" name="subject" placeholder="Subject" />
             </div>
-            <textarea placeholder="Tell us about your interest"></textarea>
+            <textarea name="message" placeholder="Tell us about your interest" required></textarea>
             <button type="submit" className="submit-btn">Send to us</button>
           </form>
         </div>
