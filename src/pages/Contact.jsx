@@ -7,7 +7,7 @@ const Contact = () => {
       {/* Left Section */}
       <div className="contact-left">
         <h1>Let’s get<br />in touch</h1>
-        <p className="subtext">Don’t be afraid to<br /> say hello with us!</p>
+        <p className="subtext">Don’t be afraid to<br /> say hello with me!</p>
 
         <div className="contact-info">
           <p className="label">Phone</p>
@@ -38,8 +38,8 @@ const Contact = () => {
             <span className="head"></span>
           </div>
           <p className="quote">
-            Great! We're excited to hear from you and let's start something special together.<br />
-            Call us for any inquiry.
+            Great! I'm excited to hear from you and let's start something special together.<br />
+            Call me for any inquiry.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ const Contact = () => {
               <input type="text" name="phone" placeholder="Phone" />
               <input type="text" name="subject" placeholder="Subject" />
             </div>
-            <textarea name="message" placeholder="Tell us about your interest" required></textarea>
+            <textarea name="message" placeholder="Write your message here!" required></textarea>
             <button type="submit" className="submit-btn">Send to us</button>
           </form>
         </div>
