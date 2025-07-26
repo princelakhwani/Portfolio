@@ -3,14 +3,13 @@ import "/src/Styles/About/Service.css";
 
 const Services = () => {
   const skills = [
-    "Product and visual design",
-    "Interaction design",
-    "Webflow development",
-    "Motion design",
-    "Graphic design",
-    "Branding",
-    "Video editing",
-    "UI engineering",
+    "Fullstack Developer",
+    "Creative Technologist",
+    "AI Engineer",
+    "Web Experience Designer",
+    "React Specialist",
+    "Software Engineer",
+    "Machine Learning Enthusiast",
   ];
 
   return (
@@ -33,7 +32,7 @@ const Services = () => {
           {skills.map((skill, index) => (
             <li
               key={index}
-              className={skill === "UI engineering" ? "skill disabled" : "skill"}
+              className={skill === "Machine Learning Enthusiast" ? "skill disabled" : "skill"}
             >
               {skill}
             </li>

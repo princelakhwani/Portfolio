@@ -3,41 +3,39 @@ import "/src/Styles/About/MyExperience.css";
 
 const experiences = [
   {
-    title: "Product designer",
-    company: "Grey (YC W22)",
-    link: "#",
-    date: "Dec 2022 – Now",
+    title: "Fullstack Developer",
+    company: "AmanStar",
+    link: "https://www.linkedin.com/company/aman-star-information-technology/",
+    date: "May 2025 – July 2025",
+  },
+
+  {
+    title: "Technical Head",
+    company: "InSell Muj",
+    link: "https://www.instagram.com/insell.muj/",
+    date: "Oct 2024 – Now",
+  },
+
+  {
+    title: "Web Developer",
+    company: "Dectify",
+    link: "https://www.dectify.in/",
+    date: "Sept 2024 – Dec 2024",
   },
   {
-    title: "Product designer",
-    company: "Klasha",
-    link: "#",
-    date: "Mar 2022 – Jun 2022",
+    title: "Intern",
+    company: "!stop.ai",
+    link: "https://1stop.ai/",
+    date: "Mar 2024 – May 2024",
   },
+  
   {
-    title: "Freelance Product Designer",
-    company: "",
-    link: "",
-    date: "Jan 2021 – Nov 2022",
+    title: "Campus Ambassador",
+    company: "Pregrad",
+    link: "https://www.pregrad.in/",
+    date: "Nov 2023 – Dec 2023",
   },
-  {
-    title: "Product designer",
-    company: "Vop",
-    link: "#",
-    date: "Sept 2020 – Dec 2020",
-  },
-  {
-    title: "UI/UX designer",
-    company: "Livrite Healthcare Services",
-    link: "#",
-    date: "March 2020 – Dec 2020",
-  },
-  {
-    title: "UI/UX Design Intern",
-    company: "Hotels.ng internships",
-    link: "#",
-    date: "May 2020 – Aug 2020",
-  },
+  
 ];
 
 const MyExperience = () => {
@@ -55,8 +53,10 @@ const MyExperience = () => {
         {/* Left column: intro */}
         <div className="experience-left">
           <p className="experience-intro">
-            I’m driven by the challenge of adapting my skills, processes, and thinking to meet the evolving needs of the world.
-            I excel in collaborative, ambitious teams that create inclusive environments where everyone feels they belong.
+          I’m passionate about solving real-world problems through technology.
+          My experience spans full-stack development, AI/ML, and data-driven solutions.
+          I thrive in collaborative teams that value innovation and inclusion.
+          Every project is a chance to grow, adapt, and make an impact.
           </p>
         </div>
 
