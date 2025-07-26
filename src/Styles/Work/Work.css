@@ -166,15 +166,9 @@
   transform: scale(1.02); /* Optional: zoom on hover */
 }
 
-
-
-
-
 .project-block {
   padding: 0px 0;
 }
-
-
 
 .image-container {
   width: 100%;
@@ -230,7 +224,3 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
-
-
-  
