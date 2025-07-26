@@ -2,8 +2,8 @@
 import React from 'react';
 import '/src/Styles/Work/Work.css';
 import AmanImg from '/src/assets/Aman.jpg';
-// import hackathonImg from '/src/assets/hackathon.png';
 import doctorlogin from '/src/assets/work.jpeg';
+import Footer from '../component/Footer'; // ✅ Import Footer
 
 const workItems = [
   {
@@ -28,74 +28,54 @@ const workItems = [
 
 const Work = () => {
   return (
-
-    <section className="selected-works">
-      <div className="header-content">
-        <h1 className="main-heading">
-          Selected
-        </h1>
-        <h1 className="main-heading">
-          Works
-        </h1>
-        <div className="tag">FROM 2020 - NOW</div>
-      </div>
-
-      <div className="intro-section">
-        <img src="/assets/folder-icon.png" alt="Folder Icon" className="folder-icon" />
-        <p className="description">
-          Projects cutting across product and visual design and an additional section, playground, that
-          contains shots from my exploration into my other design passions.
-        </p>
-      </div>
-      <div className="arrow-wrapper">
-        <span className="material-icons scroll-arrow">arrow_downward</span>
-      </div>
-
-      <div className="intro-divider" />
-
-
-     <div className="work-list">
-  {workItems.map((item, index) => (
-    <div className="project-block" key={index}>
-      <div className="image-container">
-        <img src={item.image} alt={item.title} className="project-image" />
-      </div>
-
-      <div className="project-info">
-        <div className="project-meta">
-          <span className="project-label">{item.label}</span>
-          <span className="project-year">{item.year}</span>
+    <>
+      <section className="selected-works">
+        <div className="header-content">
+          <h1 className="main-heading">Selected</h1>
+          <h1 className="main-heading">Works</h1>
+          <div className="tag">FROM 2020 - NOW</div>
         </div>
-        <h2 className="project-title">{item.title}</h2>
-        <a href={item.link} target="_blank" rel="noopener noreferrer" className="project-link">
-          View Project ↗
-        </a>
-      </div>
 
-      <hr className="project-divider" />
-    </div>
-  ))}
-</div>
+        <div className="intro-section">
+          <img src="/assets/folder-icon.png" alt="Folder Icon" className="folder-icon" />
+          <p className="description">
+            Projects cutting across product and visual design and an additional section, playground, that
+            contains shots from my exploration into my other design passions.
+          </p>
+        </div>
 
-    </section>
+        <div className="arrow-wrapper">
+          <span className="material-icons scroll-arrow">arrow_downward</span>
+        </div>
 
-    // <section className="work-section">
-    //   <h2 className="work-title">My Work</h2>
-    //   <div className="work-grid">
-    //     {workItems.map((item, index) => (
-    //       <div className="work-card" key={index}>
-    //         <img src={item.image} alt={item.title} className="work-image" />
-    //         <div className="work-content">
-    //           <h3>{item.title}</h3>
-    //           <p>{item.description}</p>
-    //           <a href={item.link} target="_blank" rel="noopener noreferrer" className="work-button">
-    //             View Project
-    //           </a>
-    //         </div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </section>
+        <div className="intro-divider" />
+
+        <div className="work-list">
+          {workItems.map((item, index) => (
+            <div className="project-block" key={index}>
+              <div className="image-container">
+                <img src={item.image} alt={item.title} className="project-image" />
+              </div>
+
+              <div className="project-info">
+                <div className="project-meta">
+                  <span className="project-label">{item.label}</span>
+                  <span className="project-year">{item.year}</span>
+                </div>
+                <h2 className="project-title">{item.title}</h2>
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                  View Project ↗
+                </a>
+              </div>
+
+              <hr className="project-divider" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <Footer /> {/* ✅ Add Footer here */}
+    </>
   );
 };
 
