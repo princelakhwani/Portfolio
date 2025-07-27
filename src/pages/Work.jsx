@@ -12,36 +12,48 @@ const workItems = [
     description: 'A full-stack product management website built using React and Node.js with dynamic image uploads.',
     link: 'https://amanstar.example.com',
     image: AmanImg,
+    label: 'Product • Full‑stack',
+    year: '2025',
   },
   {
     title: 'Hackathon Site',
     description: '36-hour Hackathon event registration and details website hosted on mujiic.com.',
     link: 'https://mujiic.com',
     image: doctorlogin,
+    label: 'Web • Event',
+    year: '2024',
   },
   {
     title: 'Doctor Login App',
     description: 'Doctor login portal with Firebase authentication and custom validation.',
     link: '/doctor-login',
     image: doctorlogin,
+    label: 'Auth • React • Firebase',
+    year: '2024',
   },
   {
     title: 'Doctor Login App',
     description: 'Doctor login portal with Firebase authentication and custom validation.',
     link: '/doctor-login',
     image: doctorlogin,
+    label: 'Auth • React • Firebase',
+    year: '2024',
   },
   {
     title: 'Doctor Login App',
     description: 'Doctor login portal with Firebase authentication and custom validation.',
     link: '/doctor-login',
     image: doctorlogin,
+    label: 'Auth • React • Firebase',
+    year: '2024',
   },
   {
     title: 'Doctor Login App',
     description: 'Doctor login portal with Firebase authentication and custom validation.',
     link: '/doctor-login',
     image: doctorlogin,
+    label: 'Auth • React • Firebase',
+    year: '2024',
   },
 ];
 
@@ -71,69 +83,110 @@ const Work = () => {
 
         <div className="work-list">
           {/* Full-width project 1 */}
-          <div className="project-block" key={0}>
-            <div className="image-container">
-              <img src={workItems[0].image} alt={workItems[0].title} className="project-image" />
-            </div>
-            <div className="project-info">
-              <div className="project-meta">
-                <span className="project-label">{workItems[0].label}</span>
-                <span className="project-year">{workItems[0].year}</span>
+          <a
+            href={workItems[0].link}
+            className="project-wrapper"
+            key={0}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="project-block">
+              <div className="image-container">
+                <img
+                  src={workItems[0].image}
+                  alt={workItems[0].title}
+                  className="project-image"
+                />
               </div>
-              <h2 className="project-title">{workItems[0].title}</h2>
-              <a href={workItems[0].link} className="project-link" target="_blank" rel="noopener noreferrer">
-                View Project ↗
-              </a>
+              <div className="project-info">
+                <div className="project-meta">
+                  <span className="project-label">{workItems[0].label}</span>
+                  <span className="project-year">{workItems[0].year}</span>
+                </div>
+                <h2 className="project-title">{workItems[0].title}</h2>
+                <p className="project-desc">{workItems[0].description}</p>
+              </div>
+              <hr className="project-divider" />
             </div>
-            <hr className="project-divider" />
-          </div>
+          </a>
 
           {/* Side-by-side projects 2 & 3 */}
           <div className="project-row">
             {[1, 2].map((i) => (
-              <div className="project-half" key={i}>
-                <div className="image-container">
-                  <img src={workItems[i].image} alt={workItems[i].title} className="project-image" />
-                </div>
-                <div className="project-info">
-                  <div className="project-meta">
-                    <span className="project-label">{workItems[i].label}</span>
-                    <span className="project-year">{workItems[i].year}</span>
+              <a
+                href={workItems[i].link}
+                className="project-wrapper project-wrapper-half"
+                key={i}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="project-half">
+                  <div className="image-container">
+                    <img
+                      src={workItems[i].image}
+                      alt={workItems[i].title}
+                      className="project-image"
+                    />
                   </div>
-                  <h2 className="project-title">{workItems[i].title}</h2>
-                  <a href={workItems[i].link} className="project-link" target="_blank" rel="noopener noreferrer">
-                    View Project ↗
-                  </a>
+                  <div className="project-info">
+                    <div className="project-meta">
+                      <span className="project-label">{workItems[i].label}</span>
+                      <span className="project-year">{workItems[i].year}</span>
+                    </div>
+                    <h2 className="project-title">{workItems[i].title}</h2>
+                    <p className="project-desc">{workItems[i].description}</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
           <hr className="project-divider" />
 
           {/* Full-width project 4 */}
-          <div className="project-block" key={3}>
-            <div className="image-container">
-              <img src={workItems[3].image} alt={workItems[3].title} className="project-image" />
-            </div>
-            <div className="project-info">
-              <div className="project-meta">
-                <span className="project-label">{workItems[3].label}</span>
-                <span className="project-year">{workItems[3].year}</span>
+          <a
+            href={workItems[3].link}
+            className="project-wrapper"
+            key={3}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="project-block">
+              <div className="image-container">
+                <img
+                  src={workItems[3].image}
+                  alt={workItems[3].title}
+                  className="project-image"
+                />
               </div>
-              <h2 className="project-title">{workItems[3].title}</h2>
-              <a href={workItems[3].link} className="project-link" target="_blank" rel="noopener noreferrer">
-                View Project ↗
-              </a>
+              <div className="project-info">
+                <div className="project-meta">
+                  <span className="project-label">{workItems[3].label}</span>
+                  <span className="project-year">{workItems[3].year}</span>
+                </div>
+                <h2 className="project-title">{workItems[3].title}</h2>
+                <p className="project-desc">{workItems[3].description}</p>
+              </div>
+              <hr className="project-divider" />
             </div>
-            <hr className="project-divider" />
-          </div>
+          </a>
 
           {/* Side-by-side projects 5 & 6 */}
           <div className="project-row">
-            {[4, 5].map((i) => (
-              <div className="project-half" key={i}>
+          {[4, 5].map((i) => (
+            <a
+              href={workItems[i].link}
+              className="project-wrapper project-wrapper-half"
+              key={i}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="project-half">
                 <div className="image-container">
-                  <img src={workItems[i].image} alt={workItems[i].title} className="project-image" />
+                  <img
+                    src={workItems[i].image}
+                    alt={workItems[i].title}
+                    className="project-image"
+                  />
                 </div>
                 <div className="project-info">
                   <div className="project-meta">
@@ -141,15 +194,13 @@ const Work = () => {
                     <span className="project-year">{workItems[i].year}</span>
                   </div>
                   <h2 className="project-title">{workItems[i].title}</h2>
-                  <a href={workItems[i].link} className="project-link" target="_blank" rel="noopener noreferrer">
-                    View Project ↗
-                  </a>
+                  <p className="project-desc">{workItems[i].description}</p>
                 </div>
               </div>
-            ))}
+            </a>
+          ))}
           </div>
         </div>
-
       </section>
 
       <Footer /> {/* ✅ Add Footer here */}
