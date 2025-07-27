@@ -1,7 +1,7 @@
 // src/pages/Work.jsx
 import React from 'react';
 import '/src/Styles/Work/Work.css';
-import AmanImg from '/src/assets/Aman.jpg';
+import AmanImg from '/src/assets/amanwork.png';
 import doctorlogin from '/src/assets/work.jpeg';
 import Footer from '../component/Footer'; // ✅ Import Footer
 import folder from '/src/assets/folder.png';
@@ -10,7 +10,7 @@ const workItems = [
   {
     title: 'AmanStar Website',
     description: 'A full-stack product management website built using React and Node.js with dynamic image uploads.',
-    link: 'https://amanstar.example.com',
+    link: 'https://amanstar.netlify.in',
     image: AmanImg,
     label: 'Product • Full‑stack',
     year: '2025',
