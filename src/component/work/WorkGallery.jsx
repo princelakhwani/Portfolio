@@ -39,9 +39,9 @@ const works = [
   {
     id: 4,
     image: img4,
-    year: "2024-now",
+    year: "Coming Soon",
     name: "MedVault",
-    category: "E-Medical Platform",
+    category: "E-Medical Platform(Coming Soon)",
     tags: ["Emergency", "Security"],
     link: "#",
   },
