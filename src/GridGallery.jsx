@@ -28,7 +28,7 @@ const cards = [
     year: '20',
     title: 'CREDENTIALS',
     image: resumeImage,
-    url: '/src/assets/Resume.pdf', // This should be in the public folder
+    url: '/Resume.pdf', // This should be in the public folder
     type: 'download',
   },
 ];
