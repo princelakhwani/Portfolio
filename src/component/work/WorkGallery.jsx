@@ -101,7 +101,7 @@ const WorkGallery = () => {
       { threshold: 0.1 }
     );
 
-    const elements = containerRef.current.querySelectorAll(".section-wrapper");
+    const elements = containerRef.current.querySelectorAll(".section-wrapper, .ending-message-wrapper");
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -159,7 +159,14 @@ const WorkGallery = () => {
     }
   }
 
-  return <div className="work-gallery" ref={containerRef}>{content}</div>;
+  return (
+    <div className="work-gallery" ref={containerRef}>
+      {content}
+      <div className="ending-message-wrapper">
+        <div className="ending-message">Many more to come</div>
+      </div>
+    </div>
+  );
 };
 
 export default WorkGallery;

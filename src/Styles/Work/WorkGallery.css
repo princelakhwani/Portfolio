@@ -143,6 +143,34 @@
   transform: translateY(0);
 }
 
+.ending-message-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+
+.ending-message-wrapper.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ending-message {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  color: #888;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -173,5 +201,16 @@
 
   .work-category {
     font-size: 1rem;
+  }
+
+  .ending-message {
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .ending-message-wrapper {
+    justify-content: center;
+    align-items: center;
   }
 }
