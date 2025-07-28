@@ -51,11 +51,12 @@
 .work-image-wrapper {
   border-radius: 12px;
   overflow: hidden;
+  height: 600px;
 }
 
 .work-image {
   width: 100%;
-  height: auto;
+  height: 90%;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);

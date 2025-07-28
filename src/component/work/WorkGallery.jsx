@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import "/src/Styles/Work/WorkGallery.css";
 
-import img1 from "/src/assets/Aman.jpg";
-import img2 from "/src/assets/Aman.jpg";
-import img3 from "/src/assets/Aman.jpg";
-import img4 from "/src/assets/Aman.jpg";
-import img5 from "/src/assets/Aman.jpg";
-import img6 from "/src/assets/Aman.jpg";
+import img1 from "/src/assets/amanstar.png";
+import img2 from "/src/assets/mujiic.png";
+import img3 from "/src/assets/hireindexs.png";
+import img4 from "/src/assets/Medvault.png";
+import img5 from "/src/assets/market.png";
+import img6 from "/src/assets/tree.png";
 
 const works = [
   {
@@ -16,7 +16,7 @@ const works = [
     name: "GREY",
     category: "INCLUSIVE GLOBAL BANKING",
     tags: ["UX/UI", "React", "B2C"],
-    link: "#",
+    link: "https://amanstar.netlify.app/",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const works = [
     name: "KLASHA",
     category: "BUSINESS FINANCE",
     tags: ["Mobile", "Payments"],
-    link: "#",
+    link: "https://mujiic.netlify.app/",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const works = [
     name: "TICKETI",
     category: "MOVIE TICKETING",
     tags: ["Web App", "Booking", "Node.js"],
-    link: "#",
+    link: "https://hire-index-v1-5e4w.vercel.app/",
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const works = [
     name: "PROJECT 5",
     category: "WEB3 DASHBOARD",
     tags: ["Blockchain", "Analytics"],
-    link: "#",
+    link: "https://gynger.vercel.app/",
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ const works = [
     name: "PROJECT 6",
     category: "CRYPTO WALLET",
     tags: ["Web3", "Security"],
-    link: "#",
+    link: "https://vrikshaby-gradians.vercel.app",
   },
 ];
 
