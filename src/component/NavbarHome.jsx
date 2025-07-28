@@ -74,7 +74,7 @@ function NavbarHome() {
       <div className="navbar-right">
         <a
           className="resume resume-animated"
-          href="/src/assets/Resume.pdf"
+          href="/public/Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download // ✅ Add this
