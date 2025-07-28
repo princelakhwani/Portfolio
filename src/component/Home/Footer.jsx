@@ -45,7 +45,7 @@ function Footer() {
         </a>
       </div>
       <div className="footer-right">
-        <a href="https://open.spotify.com/playlist/37i9dQZF1EJAsIdcvuuRRT" className="footer-link-animated listen-button">
+        <a href="https://open.spotify.com/" className="footer-link-animated listen-button">
           <img src={spotifyIcon} alt="Spotify" className="spotify-icon" />
           <AnimatedText text="LISTEN" />
         </a>
