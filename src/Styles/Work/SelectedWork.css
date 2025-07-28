@@ -1,37 +1,40 @@
+/* ---------- Base Styles ---------- */
 .selected-works {
   background-color: #ffffff;
-  padding: 80px 24px;
+  padding: 48px 16px;
   font-family: 'Inter', sans-serif;
   color: #000000;
 }
 
 .header-content {
   text-align: left;
-  margin-bottom: 48px;
-  max-width: 1200px;
+  margin-bottom: 32px;
+  max-width: 1000px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 24px;
+  padding: 0 16px;
   position: relative;
 }
 
 .main-heading {
-  font-size: 80px;
-  font-weight: 800;
-  line-height: 1.1;
-  margin: 0;
-  max-width: 700px;
+  font-size: clamp(24px, 5vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
+  margin: 0px;
+  max-width: 600px;
 }
 
 .tag {
   position: absolute;
-  top: 29%;
-  left: 28%;
+  top: 100px;
+  left: 15%;
   background-color: #d79c1b;
   color: #000000;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 10px;
   transform: rotate(-12deg);
   font-weight: 600;
 }
@@ -40,24 +43,24 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  max-width: 400px;
-  margin: 40px 8% 10px auto;
+  max-width: 320px;
+  margin: 24px 6% 8px auto;
   text-align: right;
 }
 
 .folder-icon {
-  width: 110px;
-  margin-bottom: 16px;
+  width: 80px;
+  margin-bottom: 12px;
 }
 
 .arrow-wrapper {
   display: flex;
   justify-content: flex-start;
-  margin: 0px 10%;
+  margin: 0 6%;
 }
 
 .scroll-arrow {
-  font-size: 100px;
+  font-size: 60px;
   color: #888;
   opacity: 0.5;
   transition: transform 0.3s ease;
@@ -66,37 +69,125 @@
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50%     { transform: translateY(8px); }
+  50%     { transform: translateY(6px); }
 }
 
 .intro-divider {
-  width: 100vw;
+  width: 100%;
   height: 1px;
   background-color: #ddd;
-  margin: 60px 0;
+  margin: 40px 0;
   border: none;
 }
 
 .description {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: clamp(13px, 2vw, 14px);
+  line-height: 1.5;
   color: #333;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+
+/* ---------- Tablets & Small Screens ---------- */
+@media (max-width: 1024px) {
   .main-heading {
+    font-size: clamp(22px, 5vw, 36px);
+    max-width: 100%;
+  }
+
+  .tag {
+    top: 80px;
+    left: 10%;
+    font-size: 9px;
+    padding: 3px 8px;
+  }
+
+  .intro-section {
+    max-width: 100%;
+    margin: 20px auto 6px auto;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 16px;
+  }
+
+  .folder-icon {
+    width: 70px;
+  }
+
+  .scroll-arrow {
     font-size: 48px;
   }
+
+  .arrow-wrapper {
+    justify-content: center;
+    margin: 16px auto;
+  }
+
+  .description {
+    font-size: 13px;
+    padding: 0 12px;
+  }
+}
+
+
+/* ---------- Phones & Small Devices ---------- */
+@media (max-width: 768px) {
+  .selected-works {
+    padding: 32px 12px;
+  }
+
+  .main-heading {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
   .tag {
     position: static;
     transform: none;
-    margin-top: 12px;
+    margin-top: 8px;
     display: inline-block;
   }
+
+  .header-content {
+    padding: 0 12px;
+  }
+
   .intro-section {
-    align-items: flex-start;
-    text-align: left;
-    margin: 40px auto 10px auto;
+    padding: 0 12px;
+  }
+
+  .folder-icon {
+    width: 60px;
+    margin-bottom: 8px;
+  }
+
+  .scroll-arrow {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 12.5px;
+  }
+}
+
+
+/* ---------- Very Small Screens (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 22px;
+  }
+
+  .folder-icon {
+    width: 50px;
+  }
+
+  .scroll-arrow {
+    font-size: 32px;
+  }
+
+  .intro-section {
+    padding: 0 8px;
+  }
+
+  .description {
+    font-size: 12px;
   }
 }
