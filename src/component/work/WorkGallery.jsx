@@ -1,5 +1,4 @@
-// src/component/WorkGallery.jsx
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "/src/Styles/Work/WorkGallery.css";
 
 import img1 from "/src/assets/Aman.jpg";
@@ -87,6 +86,27 @@ const WorkLabel = ({ work }) => (
 );
 
 const WorkGallery = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = containerRef.current.querySelectorAll(".section-wrapper");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   const content = [];
 
   for (let i = 0; i < works.length; ) {
@@ -139,7 +159,7 @@ const WorkGallery = () => {
     }
   }
 
-  return <div className="work-gallery">{content}</div>;
+  return <div className="work-gallery" ref={containerRef}>{content}</div>;
 };
 
 export default WorkGallery;

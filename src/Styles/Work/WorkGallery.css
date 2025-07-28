@@ -132,6 +132,18 @@
   font-weight: bold;
 }
 
+.section-wrapper {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.section-wrapper.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .half-wrapper-with-line {
